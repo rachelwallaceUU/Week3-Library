@@ -5,6 +5,14 @@
     string ISBN;
     int NoOfPages;
 
+    public Book(string bookTitle, string bookAuthor, string bookISBN, int bookNoOfPages)
+    {
+        Title = bookTitle;
+        Author = bookAuthor;
+        ISBN = bookISBN;
+        NoOfPages = bookNoOfPages;
+    }
+
     void DisplayInfo()   //method called DisplayInfo inside class Book
     {
         Console.WriteLine("Book Information");
@@ -21,18 +29,10 @@
     {
         //create a new instance of the book class and call it book
         //book has access to the 3 strings
-        Book book = new Book();
+        Book book = new Book("C# for beginners", "Bill Gates", "1234567", 200);
 
-        book.Title = "C# for beginners";  //string
-        book.Author = "BillGates";
-        book.ISBN = "12345678";
-        book.NoOfPages = 200;
-
-        Book book2 = new Book();
-        book2.Title = "C# methods and classes";
-        book2.Author = "Microsoft";
-        book2.ISBN = "7578953";
-        book2.NoOfPages = 50;
+        Book book2 = new Book("C# methods and classes", "Microsoft", "7578953", 50);
+        
 
         book.DisplayInfo(); 
         book2.DisplayInfo();      //output the book and book2 info to console from DisplayInfo();
