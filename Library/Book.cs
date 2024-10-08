@@ -2,17 +2,41 @@
 {
     class Book
     {
-        string Title;
-        string Author;   //store 3 pieces of data about the book
-        string ISBN;
-        int NoOfPages;
+        private string title;
+        private string author;   //store 3 pieces of data about the book
+        private string isbn;
+        private int noofpages;
+
+        public string Title
+        {
+            get { return title; }  // get method
+            set { title = value; } // set method
+        }
+
+        public string Author
+        {
+            get { return author;  }
+            set { author = value; }
+        }
+
+        public string ISBN
+        {
+            get { return isbn; }
+            set { isbn = value; }
+        }
+
+        public int NoOfPages
+        {
+            get { return noofpages; }
+            set { noofpages = value; }
+        }
 
         public Book(string bookTitle, string bookAuthor, string bookISBN, int bookNoOfPages)
         {
-            Title = bookTitle;
-            Author = bookAuthor;
-            ISBN = bookISBN;
-            NoOfPages = bookNoOfPages;
+            title = bookTitle;
+            author = bookAuthor;
+            isbn = bookISBN;
+            noofpages = bookNoOfPages;
         }
 
         public void DisplayInfo()   //method called DisplayInfo inside class Book
